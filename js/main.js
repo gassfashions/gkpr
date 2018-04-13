@@ -165,7 +165,7 @@ gateKeeperApp.controller('loginPageCtrl', function ($scope, $http, $cookies, $ro
                 $scope.$parent.contentFound = 0;   
                 $scope.contentFound = 0;
 
-                $http.get(serviceBase + 'GetValidateUser?user='+encodeURIComponent(userObj.user)+'&password='+encodeURIComponent(userObj.user_password)).then(function (data){
+                $http.get(serviceBase + 'getValidateUser?user='+encodeURIComponent(userObj.user)+'&password='+encodeURIComponent(userObj.user_password)).then(function (data){
                     $scope.loginObj = data.data.data;
                     $scope.loginObjmsg = data.data.msg;
                     // Setting a cookie
