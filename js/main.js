@@ -183,7 +183,7 @@ gateKeeperApp.controller('loginPageCtrl', function ($scope, $http, $cookies, $ro
                         $rootScope.user_email = $cookies.get('user_email');
                         $rootScope.profile_image = $cookies.get('profile_image');
                         $rootScope.flat_number = $cookies.get('flat_number');*/
-                        $rootScope.goForward();
+                        //$rootScope.goForward();
                         $('#loading_span_id').html('Loading');
                        
                        window.location.href = defaultLocalPath+'dashboard.html';
