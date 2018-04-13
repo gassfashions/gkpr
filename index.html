@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="gateKeeperApp">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; 
+        any other head content must come *after* these tags -->
+        <title>:: Gate Keeper ::</title>
+        <meta name="robots" Content="noindex, nofollow"/>
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/angular-confirm.css">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    </head>
+    <body ng-controller="mainCtrl" class="{{bodyClass}}">
+
+        <!--JS Custom Alert Starts Here-->
+        <div id="alert_main_div" class="jsAlertOverlay hide">
+            <div class="jsAlertBox">
+                <div class="alertInfoBox">
+                    <div class="alertIcon">!</div>
+                    <div class="alertTitle">Alert</div>
+                    <div class="alertInfo" id="alert_text_div" >
+                        You're ready to proceed using CakeHR.
+                    </div>
+                    <!--<a class="btnClose" href="javascript:;"><span>X</span></a>-->
+                </div>
+                <div class="alertBtns">
+                    <a class="btn btn-primary" href="javascript:;" onclick="$('#alert_main_div').addClass('hide')">Ok</a>
+                </div>
+            </div>
+        </div> 
+        <!--JS Custom Alert Starts Here-->
+        
+        <!-- add "lesHead" class in "pageLoader" class where header is coming -->
+        <div ng-hide="contentFound" class="pageLoader">
+            <div class="loaderText">
+                <h4><em id="loading_span_id">Loading</em> <span class="loadingDots"></span></h4>
+            </div>
+        </div>
+
+        <div id="wrapper">
+            <div id="innerWrapper">
+                <div ng-view class="{{pageAnimation}}"></div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/slick.min.js"></script>
+        <script type="text/javascript" src="js/angular/angular.min.js"></script>
+        <script type="text/javascript" src="js/angular/angular-route.min.js"></script>
+        <script type="text/javascript" src="js/angular/angular-animate.min.js"></script>
+        <script type="text/javascript" src="js/angular/angular-touch.min.js"></script>
+        <script type="text/javascript" src="js/angular/angular-resource.min.js"></script>
+        <script type="text/javascript" src="js/angular/angular-aria.min.js"></script>
+        <script type="text/javascript" src="js/angular/angular-material.min.js"></script>
+        <script type="text/javascript" src="js/angular/moment-with-locales.min.js"></script>
+        <script type="text/javascript" src="js/angular/angular-material-datetimepicker.js"></script>
+        <script type="text/javascript" src="js/angular/angular-cookies.js"></script> 
+        <script type="text/javascript" src="js/angular/lazy-scroll.min.js"></script> 
+        <script type="text/javascript" src="js/angular/angular-confirm.js"></script> 
+        <script type="text/javascript" src="js/angular/ngMask.js"></script> 
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="js/gistfile1.js"></script>
+    </body>
+</html>

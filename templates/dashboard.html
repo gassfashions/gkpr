@@ -1,0 +1,133 @@
+<div class="frameWrapper dashboardPage" ng-click="getClass()">
+    <!--Body Frame Starts Here-->
+    <div class="outerFrame">
+        <header class="header">
+            <a href="javascript:;" class="btnPrevPage btnMenu">
+                <i class="flaticon-bars hide"></i>
+            </a>
+            <span class="headerTitle">Gate Keeper</span>
+            <a href="javascript:;" class="btnNextPage" ng-click="toggleUserNav()">
+                <i class="flaticon-user-male-o"></i>
+            </a>
+        </header>
+
+
+        <!--Inner Frame Starts Here-->
+        <div class="innerFrame">
+            <div class="dashboard">
+                <div class="loggedUserInfo">
+                    <div class="loggedUser">
+                        Hello<span>{{user_fullname}}</span>
+                    </div>
+                    
+                    <div id="curntTempDate" class="slider">
+                        <div class="item">
+                            <time>
+                                <span class="dateMonth">{{currentDate}}<sup>{{currentDateSup}}</sup> {{currentMonth}} </span>
+                                <span class="year">{{currentYear}}</span>
+                            </time>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul class="dashboardNav">
+                <li>
+                    <div class="navBlock">
+                        <a href="{{defaultLocalPath}}notifications.html" ng-click="goForward()">
+                            <span class="navIcon">
+                                <i class="flaticon-bell"></i>
+                                <i ng-if="notificationsCount" class="notifications">{{notificationsCount}}</i>
+                            </span>
+                            <span class="title">Notification</span>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--Inner Frame Ends Here-->
+
+        <!--
+        <footer class="footer">
+            <p class="copyrightText">Powered By <a href="javascript:;">Buzytech</a></p>
+        </footer>
+        -->
+    </div>
+    <!--Body Frame Ends Here-->
+
+    <!--Side Navigation Starts Here-->
+    
+     <div class="sideNavContainer" ng-class="clsUserNav" ng-swipe-right="toggleUserNav()">
+        <div class="sideNav">
+            <div class="memberThumbnail">
+                <a href="javascript:;" class="closeMe" ng-click="toggleUserNav();">
+                    <i class="flaticon-cancel-o"></i>
+                </a>
+                <div class="thumb">
+                    <a href="javascript:;" ng-click="openCapturePhotoOption();">
+                        <img id="profileSmallImageShow" ng-if="profile_image" class="img-responsive" src="{{mainSiteImageURL}}/upload/profile/{{profile_image}}" alt="" />
+                        <img id="profileSmallImageShow" ng-if="!profile_image" class="img-responsive" src="{{mainSiteImageURL}}/images/photos/profilepic.png" alt="" />
+                        <span><i class="fa fa-camera"></i></span>
+                    </a>
+                </div>
+                <span class="memName">{{user_fullname}}</span>
+                <span class="memFlatNo">({{flat_number}})</span>
+            </div>
+            
+            <div class="sideNavListBox clearfix">
+                <!--Profile Picture Preview Starts Here-->
+                <div class="profilePicPreivew hide" id="imageLi">
+                    <input type="hidden" name="imageHiddenValue" id="imageHiddenValue" value="" >
+                    <div class="col-xs-8 col-xs-offset-2">
+                        <div class="thumbnail">
+                            <img class="img-responsive" id="profileSmallImage" src="" alt="" />
+                        </div>
+                        <div class="btn-group btn-group-justified">
+                            <a href="javascript:;" class="btn btn-success" ng-click="saveCapturePhoto()">Save</a>
+                            <a href="javascript:;" class="btn btn-warning" ng-click="cancelCapturePhoto()">Cancel</a>
+                        </div>
+                    </div>
+                </div>
+                <!--Profile Picture Preview Starts Here-->
+                <ul class="sideNavList">
+                    <li>
+                        <a href="{{defaultLocalPath}}logout.html">
+                            <i class="fa fa-sign-out"></i> Logout
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="poweredBy">Powered By ABCD-XYZ</div>
+        </div>
+    </div>
+    <!--Side Navigation Ends Here-->
+    
+    <!--Change Profile Photo Box Starts Here-->
+    <div id="changeProfilePhoto">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">Profile Photo</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <a class="actBtn" href="javascript:;" ng-click="capturePhotoGallery();">
+                            <span class="icon"><i class="fa fa-image"></i></span>
+                            <span>Gallery</span>
+                        </a>
+                    </div>
+                    <div class="col-xs-3">
+                        <a class="actBtn" href="javascript:;" ng-click="capturePhoto();">
+                            <span class="icon"><i class="fa fa-camera"></i></span>
+                            <span>Camera</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-footer">
+                <a class="btn btn-block" href="javascript:;" ng-click="closeCapturePhotoOption();">Cancel</a>
+            </div>
+        </div>
+    </div>
+    <!--Change Profile Photo Box Ends Here-->
+</div>

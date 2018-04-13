@@ -1,0 +1,87 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 21/03/2017 11:30
+    */
+
+    @font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+    .flaticon-angle-right:before { content: "\f100"; }
+.flaticon-angle-left:before { content: "\f101"; }
+.flaticon-multimedia:before { content: "\f102"; }
+.flaticon-shared-folder:before { content: "\f103"; }
+.flaticon-calendar:before { content: "\f104"; }
+.flaticon-chat:before { content: "\f105"; }
+.flaticon-bell:before { content: "\f106"; }
+.flaticon-compass:before { content: "\f107"; }
+.flaticon-bars:before { content: "\f108"; }
+.flaticon-film-strip:before { content: "\f109"; }
+.flaticon-book:before { content: "\f10a"; }
+.flaticon-groceries:before { content: "\f10b"; }
+.flaticon-cutlery:before { content: "\f10c"; }
+.flaticon-healthy:before { content: "\f10d"; }
+.flaticon-minus-o:before { content: "\f10e"; }
+.flaticon-cancel-o:before { content: "\f10f"; }
+.flaticon-add-o:before { content: "\f110"; }
+.flaticon-user-male-o:before { content: "\f111"; }
+.flaticon-user-female-o:before { content: "\f112"; }
+.flaticon-arrow-down:before { content: "\f113"; }
+.flaticon-arrow-up:before { content: "\f114"; }
+.flaticon-arrow-right:before { content: "\f115"; }
+.flaticon-arrow-left:before { content: "\f116"; }
+.flaticon-reload:before { content: "\f117"; }
+    
+    $font-Flaticon-angle-right: "\f100";
+    $font-Flaticon-angle-left: "\f101";
+    $font-Flaticon-multimedia: "\f102";
+    $font-Flaticon-shared-folder: "\f103";
+    $font-Flaticon-calendar: "\f104";
+    $font-Flaticon-chat: "\f105";
+    $font-Flaticon-bell: "\f106";
+    $font-Flaticon-compass: "\f107";
+    $font-Flaticon-bars: "\f108";
+    $font-Flaticon-film-strip: "\f109";
+    $font-Flaticon-book: "\f10a";
+    $font-Flaticon-groceries: "\f10b";
+    $font-Flaticon-cutlery: "\f10c";
+    $font-Flaticon-healthy: "\f10d";
+    $font-Flaticon-minus-o: "\f10e";
+    $font-Flaticon-cancel-o: "\f10f";
+    $font-Flaticon-add-o: "\f110";
+    $font-Flaticon-user-male-o: "\f111";
+    $font-Flaticon-user-female-o: "\f112";
+    $font-Flaticon-arrow-down: "\f113";
+    $font-Flaticon-arrow-up: "\f114";
+    $font-Flaticon-arrow-right: "\f115";
+    $font-Flaticon-arrow-left: "\f116";
+    $font-Flaticon-reload: "\f117";

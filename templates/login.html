@@ -1,0 +1,56 @@
+
+<div class="loginPage">
+    <div class="logRegFormBox">
+        <div class="logRegSteps">
+            <!--Login Register Step 1 = Login / Register (Default Page)-->
+            <div class="logRegStep-1 active" id="loginForm">
+                <h1 class="logo">
+                    <img src="images/hemilton-height-logo.png" alt="" />
+                    <small>Gate Keeper</small>
+                </h1>
+
+                <div class="formContainer">
+                    <div class="regForm clearfix">
+                        <div id="login_error"></div>
+                        <form class="form-horizontal">
+                            <input name="to_do" id="to_do" value="submit" type="hidden" ng-model="userObj.to_do">
+                            <div class="form-group">
+                                <div class="col-xs-12">
+                                    <div class="inputField">
+                                        <input class="form-control text-uppercase" type="text" placeholder=" " name="user" id="user" ng-model="userObj.user" />
+                                        <label>Name</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-xs-12">
+                                    <div class="inputField">
+                                        <input class="form-control" type="password" placeholder=" " name="user_password" id="user_password" ng-model="userObj.user_password" />
+                                        <label>Password</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--<div class="form-group">
+                                <div class="col-xs-12 text-center">
+                                    <a href="javascript:;" class="btn btn-info btn-block btnSignin" ng-click="userObj.to_do = 'login'; checkLoginValidity(userObj)">Sign In</a>
+                                    <a href="javascript:;" class="btn btn-link btnForgot" data-toggle="tab" data-target="#forgotForm">
+                                        Forgot Password?
+                                    </a>
+                                </div>
+                            </div>-->
+                        </form>
+                    </div>
+                </div>
+
+                <!--<div class="footer">
+                    <div class="btn-group btn-group-justified">
+                        <a href="javascript:;" class="btn" data-toggle="tab" data-target="#registerForm">Register Account</a>
+                        <a href="javascript:;" class="btn" data-toggle="modal" data-target="#helpModalBox">
+                            Need Help?
+                        </a>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+    </div>
+</div>
