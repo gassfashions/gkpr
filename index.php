@@ -1,3 +1,3 @@
 <?php 
-   'We will Develop App here.';
+   echo 'We will Develop App here.';
 ?>
