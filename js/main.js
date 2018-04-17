@@ -7,6 +7,8 @@ var runningSiteURL = 'http://api.gassgadget.com/gkpr';
 var mainSiteURL = 'http://api.gassgadget.com/gkpr';
 var mainSiteImageURL = 'http://api.gassgadget.com/gkpr';
 var mainSiteBannerURL = 'http://api.gassgadget.com/gkpr';
+var authUser = 'saud';
+var authUserPass = 'Hello@123';
 
 var defaultLocalPath = '#/';
 
@@ -166,8 +168,9 @@ gateKeeperApp.controller('loginPageCtrl', function ($scope, $http, $cookies, $ro
                 $scope.contentFound = 0;
                 
                 //$http.defaults.headers.common = {"Access-Control-Request-Headers": "accept, origin, authorization"}; //you probably don't need this line.  This lets me connect to my server on a different domain
-                $http.defaults.headers.common['Authorization'] = 'Basic ' + CustomizeBase64.encode('sauds' + ':' + 'Hello@123');
-    
+                alert(authUser)
+                alert(authUserPass)
+                $http.defaults.headers.common['Authorization'] = 'Basic ' + CustomizeBase64.encode(authUser + ':' + authUserPass);
                 $http.get(serviceBase + 'getValidateUser?flat_no='+encodeURIComponent(userObj.flat_no)+'&password='+encodeURIComponent(userObj.user_password)).then(function (data){
                     $scope.loginObj = data.data.data;
                     $scope.loginObjmsg = data.data.msg;
