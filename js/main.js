@@ -148,9 +148,9 @@ gateKeeperApp.controller('loginPageCtrl', function ($scope, $http, $cookies, $ro
     $scope.checkLoginValidity = function(userObj) {
         
         if ($rootScope.checkConnection()) {
-            if(userObj.user === undefined || userObj.user === ''){
+            if(userObj.flat_no === undefined || userObj.flat_no === ''){
                 //$rootScope.alert("Please enter flat/unit number.", '', '');
-                $('#alert_text_div').html('Please enter user.');
+                $('#alert_text_div').html('Please enter flat/unit number.');
                 $('#alert_main_div').removeClass('hide');
                 //setTimeout(function(){$("#flat_number").focus()}, 0);
             }
@@ -165,13 +165,13 @@ gateKeeperApp.controller('loginPageCtrl', function ($scope, $http, $cookies, $ro
                 $scope.$parent.contentFound = 0;   
                 $scope.contentFound = 0;
 
-                $http.get(serviceBase + 'getValidateUser?user='+encodeURIComponent(userObj.user)+'&password='+encodeURIComponent(userObj.user_password)).then(function (data){
+                $http.get(serviceBase + 'getValidateUser?flat_no='+encodeURIComponent(userObj.flat_no)+'&password='+encodeURIComponent(userObj.user_password)).then(function (data){
                     $scope.loginObj = data.data.data;
                     $scope.loginObjmsg = data.data.msg;
                     // Setting a cookie
                     if($scope.loginObjmsg=='success'){
-                        $cookies.put('cookie_user_id', $scope.loginObj.user_id);  
-                        $cookies.put('cookie_name', $scope.loginObj.name);  
+                        $cookies.put('cookie_user_id', $scope.loginObj.id);  
+                        $cookies.put('cookie_name', $scope.loginObj.full_name);  
                         /*$cookies.put('flat_number', $scope.loginObj.flat_number);  
                         $cookies.put('user_fullname', $scope.loginObj.user_fullname);  
                         $cookies.put('user_email', $scope.loginObj.user_email); 
