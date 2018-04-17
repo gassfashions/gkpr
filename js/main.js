@@ -165,7 +165,7 @@ gateKeeperApp.controller('loginPageCtrl', function ($scope, $http, $cookies, $ro
                 $scope.$parent.contentFound = 0;   
                 $scope.contentFound = 0;
                 
-                $http.defaults.headers.common = {"Access-Control-Request-Headers": "accept, origin, authorization"}; //you probably don't need this line.  This lets me connect to my server on a different domain
+                //$http.defaults.headers.common = {"Access-Control-Request-Headers": "accept, origin, authorization"}; //you probably don't need this line.  This lets me connect to my server on a different domain
                 $http.defaults.headers.common['Authorization'] = 'Basic ' + CustomizeBase64.encode('saud' + ':' + 'Hello@123');
     
                 $http.get(serviceBase + 'getValidateUser?flat_no='+encodeURIComponent(userObj.flat_no)+'&password='+encodeURIComponent(userObj.user_password)).then(function (data){
